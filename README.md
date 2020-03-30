@@ -720,9 +720,11 @@ PCD_PAY_DATE | 결제요청일자(YYYYMMDD) | O |
    "PCD_PAY_TIME" => "20180423130201",
    "PCD_REGULER_FLAG" => "Y",
    "PCD_PAYER_EMAIL" => "dev@payple.kr",
-   "PCD_CARDNUM" => "12345678 ** ** 1234",
-   "PCD_CARDNAME" => "BC카드",
-   "PCD_CARDTRADENUM" => "201904141320332692022400"
+   "PCD_PAY_CARDNUM" => "12345678 ** ** 1234",
+   "PCD_PAY_CARDNAME" => "BC카드",
+   "PCD_PAY_CARDTRADENUM" => "201904141320332692022400",
+   "PCD_PAY_CARDAUTHNO" => "23423232",
+   "PCD_PAY_CARDRECEIPT" => "https://www.danalpay.com/receipt/creditcard/view.aspx?dataType=receipt&cpid=xxxxxxxxxx&data=xxxxxxxx"
 }
 ```
 * Response 파라미터 설명 
@@ -744,9 +746,9 @@ PCD_PAY_TAXTOTAL | 부가세 | 91
 PCD_PAY_TIME | 결제완료 시간 | 20180110152911
 PCD_REGULER_FLAG | 정기결제 여부 | Y / N
 PCD_PAYER_EMAIL | 결제고객 이메일 | dev@payple.kr
-PCD_CARDNUM | 카드번호 | 12345678 ** ** 1234
-PCD_CARDNAME | 카드사명 | BC카드
-PCD_CARDTRADENUM | 거래번호 | 201904141320332692022400
+PCD_PAY_CARDNUM | 카드번호 | 12345678 ** ** 1234
+PCD_PAY_CARDNAME | 카드사명 | BC카드
+PCD_PAY_CARDTRADENUM | 거래번호 | 201904141320332692022400
 PCD_PAY_CARDAUTHNO | 카드승인번호 | 23423232
 PCD_PAY_CARDRECEIPT | 카드전표URL | : https://www.danalpay.com/receipt/creditcard/view.aspx?dataType=receipt&cpid=xxxxxxxxxx&data=xxxxxxxx
 
