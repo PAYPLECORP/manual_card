@@ -610,10 +610,16 @@ $PCD_PAY_YEAR = (isset($_POST['PCD_PAY_YEAR'])) ? $_POST['PCD_PAY_YEAR'] : "";
 $PCD_PAY_MONTH = (isset($_POST['PCD_PAY_MONTH'])) ? $_POST['PCD_PAY_MONTH'] : "";
 $PCD_PAY_GOODS = (isset($_POST['PCD_PAY_GOODS'])) ? $_POST['PCD_PAY_GOODS'] : "";
 $PCD_PAY_TOTAL = (isset($_POST['PCD_PAY_TOTAL'])) ? $_POST['PCD_PAY_TOTAL'] : "";
-$PCD_PAY_TIME = (isset($_POST['PCD_PAY_TIME'])) ? $_POST['PCD_PAY_TIME'] : ""; 
-$PCD_CARDNUM = (isset($_POST['PCD_CARDNUM'])) ? $_POST['PCD_CARDNUM'] : "";
-$PCD_CARDNAME = (isset($_POST['PCD_CARDNAME'])) ? $_POST['PCD_CARDNAME'] : "";
-$PCD_CARDTRADENUM = (isset($_POST['PCD_CARDTRADENUM'])) ? $_POST['PCD_CARDTRADENUM'] : "";
+$PCD_PAY_ISTAX = (isset($_POST['PCD_PAY_ISTAX'])) ? $_POST['PCD_PAY_ISTAX'] : "";
+$PCD_PAY_TAXTOTAL = (isset($_POST['PCD_PAY_TAXTOTAL'])) ? $_POST['PCD_PAY_TAXTOTAL'] : "";
+$PCD_PAY_TIME = (isset($_POST['PCD_PAY_TIME'])) ? $_POST['PCD_PAY_TIME'] : "";
+$PCD_PAY_CARDNAME = (isset($_POST['PCD_PAY_CARDNAME'])) ? $_POST['PCD_PAY_CARDNAME'] : "";
+$PCD_PAY_CARDNUM = (isset($_POST['PCD_PAY_CARDNUM'])) ? $_POST['PCD_PAY_CARDNUM'] : "";
+$PCD_PAY_CARDTRADENUM = (isset($_POST['PCD_PAY_CARDTRADENUM'])) ? $_POST['PCD_PAY_CARDTRADENUM'] : "";
+$PCD_PAY_CARDAUTHNO = (isset($_POST['PCD_PAY_CARDAUTHNO'])) ? $_POST['PCD_PAY_CARDAUTHNO'] : "";
+$PCD_PAY_CARDRECEIPT = (isset($_POST['PCD_PAY_CARDRECEIPT'])) ? $_POST['PCD_PAY_CARDRECEIPT'] : "";
+$PCD_USER_DEFINE1 = (isset($_POST['PCD_USER_DEFINE1'])) ? $_POST['PCD_USER_DEFINE1'] : "";
+$PCD_USER_DEFINE1 = (isset($_POST['PCD_USER_DEFINE1'])) ? $_POST['PCD_USER_DEFINE1'] : "";
 ?>
 ```
 
@@ -636,10 +642,16 @@ PCD_PAY_YEAR | 과금연도<br>(정기결제) | 2018
 PCD_PAY_MONTH | 과금월<br>(정기결제) | 08
 PCD_PAY_GOODS | 상품명 | 정기구독 
 PCD_PAY_TOTAL | 결제금액 | 1000
+PCD_PAY_ISTAX | 과세 여부 | Y / N
+PCD_PAY_TAXTOTAL | 부가세 | 91
 PCD_PAY_TIME | 결제완료 시간 | 20180110152911
-PCD_CARDNUM | 카드번호 | 12345678 ** ** 1234
-PCD_CARDNAME | 카드사명 | BC카드
-PCD_CARDTRADENUM | 거래번호 | 201904141320332692022400
+PCD_PAY_CARDNAME | 카드사명 | BC카드
+PCD_PAY_CARDNUM | 카드번호 | 12345678 ** ** 1234
+PCD_PAY_CARDTRADENUM | 카드거래번호 | 201904141320332692022400
+PCD_PAY_CARDAUTHNO | 카드승인번호 | 42423223
+PCD_PAY_CARDRECEIPT | 카드전표URL | https://www.danalpay.com/receipt/creditcard/view.aspx?dataType=receipt&cpid=xxxxxxxxxx&data=xxxxxxxx
+PCD_USER_DEFINE1 | 사용자정의1 | 
+PCD_USER_DEFINE1 | 사용자정의2 | 
 
 <br><br><br>
 ## 결제결과 조회  
@@ -697,12 +709,14 @@ PCD_PAY_DATE | 결제요청일자(YYYYMMDD) | O |
    "PCD_PAY_MSG" => "조회완료",
    "PCD_PAY_OID" => "test201804000001",
    "PCD_PAY_TYPE" => "card",
-   "PCD_PAYER_NO" => "1234",
+   "PCD_PAYER_NO" => 1234,
    "PCD_PAYER_ID" => "NS9qNTgzU2xRNHR2RmFBWWFBTWk5UT09",
    "PCD_PAY_YEAR" => "2018",
    "PCD_PAY_MONTH" => "05",
    "PCD_PAY_GOODS" => "간편상품",
-   "PCD_PAY_TOTAL" => "1000",
+   "PCD_PAY_TOTAL" => 1000,
+   "PCD_PAY_ISTAX" => "Y",
+   "PCD_PAY_TAXTOTAL" => 91,
    "PCD_PAY_TIME" => "20180423130201",
    "PCD_REGULER_FLAG" => "Y",
    "PCD_PAYER_EMAIL" => "dev@payple.kr",
@@ -725,12 +739,16 @@ PCD_PAY_YEAR | 과금연도<br>(정기결제) | 2018
 PCD_PAY_MONTH | 과금월<br>(정기결제) | 08
 PCD_PAY_GOODS | 상품명 | 정기구독 
 PCD_PAY_TOTAL | 결제금액 | 1000
+PCD_PAY_ISTAX | 과세 여부 | Y / N
+PCD_PAY_TAXTOTAL | 부가세 | 91
 PCD_PAY_TIME | 결제완료 시간 | 20180110152911
 PCD_REGULER_FLAG | 정기결제 여부 | Y / N
 PCD_PAYER_EMAIL | 결제고객 이메일 | dev@payple.kr
 PCD_CARDNUM | 카드번호 | 12345678 ** ** 1234
 PCD_CARDNAME | 카드사명 | BC카드
 PCD_CARDTRADENUM | 거래번호 | 201904141320332692022400
+PCD_PAY_CARDAUTHNO | 카드승인번호 | 23423232
+PCD_PAY_CARDRECEIPT | 카드전표URL | : https://www.danalpay.com/receipt/creditcard/view.aspx?dataType=receipt&cpid=xxxxxxxxxx&data=xxxxxxxx
 
 <br><br><br>
 ## 문의  
