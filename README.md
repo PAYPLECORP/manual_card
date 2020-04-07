@@ -242,7 +242,106 @@ PCD_PAYER_ID | 결제고객 고유 ID | - | 정기결제(PCD_CARD_VER=01) 시 �
 
 <br><br>
 #### 1-2. 즉시 승인(PCD_PAY_WORK : PAY) 
-* 가맹점의 최종 승인없이 즉시 결제를 진행하며 별도 Request 는 없습니다.  
+* 가맹점의 최종 승인없이 즉시 결제를 진행하며 별도 Request 는 없습니다. 
+
+* 결제(CERT|PAY) Response 예시 
+```html
+{
+  "PCD_PAY_RST" => "success",
+  "PCD_PAY_CODE” => “SPCD0000”,
+  "PCD_PAY_MSG" => "결제완료",
+  "PCD_PAY_TYPE" => "card",
+  "PCD_PAY_OID" => "test201804000001",	
+  "PCD_PAYER_NO" => 2324,
+  "PCD_PAYER_ID" => "NS9qNTgzU2xRNHR2RmFBWWFBTWk5UT09",
+  "PCD_PAYER_EMAIL" => "dev@payple.kr"
+  "PCD_PAY_YEAR" => "2019",
+  "PCD_PAY_MONTH" => "09",
+  "PCD_PAY_GOODS" => "정기구독",
+  "PCD_PAY_TOTAL" => 1000,
+  “PCD_PAY_ISTAX”: “Y”,
+  “PCD_PAY_TAXTOTAL”: 10,
+  "PCD_PAY_TIME" => "20180423130201",
+  "PCD_PAY_CARDNANE" => "BC 카드",
+  "PCD_PAY_CARDNUM" => "1111********4444",
+  "PCD_PAY_CARDTRADENUM" => "201904141320332692022400",
+  "PCD_PAY_CARDAUTHNO” => “98123445”,
+  "PCD_PAY_CARDRECEIPT” => “https://www.danalpay.com/receipt/creditcard/view.aspx?dataType=receipt&cpid=9810030929&data=jq8%2BUmqBzYoCy%2BchBEE….”,
+  "PCD_REGULER_FLAG" => "Y",
+  "PCD_USER_DEFINE1” => “가맹점 정의1”,
+  "PCD_USER_DEFINE2” => “가맹점 정의2”
+}
+```
+* 결제(CERT|PAY) Response 파라미터 설명
+
+필드명 | 필수 | 타입 | 길이 | 값 | 설명
+:----: | :----: | :----: | :----: | :----: | :----:
+PCD_PAY_RST | O | C | 8 | success, error | 결제요청 결과 | 
+PCD_PAY_CODE | O | C | 8 | CDAU0000 | 결제요청 결과 코드 | 
+PCD_PAY_MSG | O | C | 255 | 결제완료 | 결제요청 결과 메세지 |
+PCD_REQ_KEY | O | C | 255 | RmFBWWFBTWNS9qNTgzU2xdd2XRNHR2c3d0251701ad6da895eb2d830bc06e34d | 최종 승인요청용 키
+PCD_PAY_TYPE | O | C | 20 | card | ‘card’ - 고정값 |
+PCD_PAY_OID | O | C | 255 | test099942200156938 | 주문번호 |
+PCD_PAYER_NO | - | N | 255 | 2324 | 사용자 필드, 결과에 그대로 리턴 |
+PCD_PAYER_ID | O | C | 255 | d0to... | 결제(빌링) KEY |
+PCD_PAYER_EMAIL | - | C | 100 | dev@payple.kr | 결과 발송 Email | 
+PCD_PAY_YEAR | O | C | 4 | 2019 | 결제 구분 년도 |
+PCD_PAY_MONTH | O | C | 2 | 09 | 결제 구분 월 |
+PCD_PAY_GOODS | O | C | 2048 | 정기구독 | 상품명 |
+PCD_PAY_TOTAL | O | N | 20 | 1000 | 카드승인 요청금액(최소 100원) | 
+PCD_PAY_ISTAX | - | C | 1 | Y | 과세설정(Default: Y, 비과세: N) |
+PCD_PAY_TAXTOTAL | - | N | 20 | 10 | 복합과세 주문건(과세+면세)에 필요한 항목이며 가맹점에서 전송한 값을 부가세로 설정합니다. |
+PCD_PAY_TIME | O | D | 14 | 20190901140130 | 결제시간 |
+PCD_PAY_CARDNAME | O | C | 100 | BC 카드 | 카드사명 |
+PCD_PAY_CARDNUM | O | C | 16 | 1111 * * * * * * * * 4444 | 카드번호(중간 8자리 * 처리) |  
+PCD_PAY_CARDTRADENUM | O | C | 24 | 2019041413203326920 | 거래 키 |
+PCD_PAY_CARDAUTHNO | O | C | 128 | 98123445 | 승인번호 |
+PCD_PAY_CARDRECEIPT | O | C | 1024 | ... | 매출전표 출력 링크 |
+PCD_REGULER_FLAG | O | C | 1 | Y | ‘Y’ - 고정값 |
+PCD_USER_DEFINE1 | - | C | 2048 | 가맹점 입력값 1 | 가맹점 사용 필드 1 | 
+PCD_USER_DEFINE2 | - | C | 2048 | 가맹점 입력값 2 | 가맹점 사용 필드 2 | 
+
+<br><br>
+#### 1-3. 카드 등록(PCD_PAY_WORK : AUTH) 
+* 가맹점의 최종 승인없이 즉시 결제를 진행하며 별도 Request 는 없습니다. 
+
+* 카드등록(AUTH) Response 예시 
+```html
+{
+  "PCD_PAY_RST" => "success",
+  "PCD_PAY_CODE” => “SPCD0000”,
+  "PCD_PAY_MSG" => "결제완료",
+  "PCD_PAY_WORK" => "AUTH",
+  "PCD_AUTH_KEY" => "a688ccb3555c25cd722483f03e23065c3d0251701ad6da895eb2d830bc06e34d",
+  "PCD_PAY_TYPE" => "card",	
+  "PCD_PAYER_NO" => 2324,
+  "PCD_PAYER_ID" => "NS9qNTgzU2xRNHR2RmFBWWFBTWk5UT09",
+  "PCD_PAYER_NAME" => "홍길동",
+  "PCD_RST_URL" => "/pg/result",
+  "PCD_PAY_CARDNANE" => "BC 카드",
+  "PCD_PAY_CARDNUM" => "1111********4444",
+  "PCD_USER_DEFINE1” => “가맹점 정의1”,
+  "PCD_USER_DEFINE2” => “가맹점 정의2”
+}
+```
+* 카드등록(AUTH) Response 파라미터 설명
+
+필드명 | 필수 | 타입 | 길이 | 값 | 설명
+:----: | :----: | :----: | :----: | :----: | :----:
+PCD_PAY_RST | O | C | 8 | success, error | 결제요청 결과 | 
+PCD_PAY_CODE | O | C | 8 | CDAU0000 | 결제요청 결과 코드 | 
+PCD_PAY_MSG | O | C | 255 | 결제완료 | 결제요청 결과 메세지 |
+PCD_PAY_WORK | O | C | 4 | AUTH | 결제요청 방식 |
+PCD_AUTH_KEY | O | C | 255 | a688ccb3555c25cd722483f03e23065c3d0251701ad6da895eb2d830bc06e34d | 결제요청을 위한 Transaction 키 | 
+PCD_PAY_TYPE | O | C | 20 | card | ‘card’ - 고정값 |
+PCD_PAYER_NO | - | N | 255 | 2324 | 사용자 필드, 결과에 그대로 리턴 |
+PCD_PAYER_ID | O | C | 255 | d0to... | 결제(빌링) KEY |
+PCD_PAYER_NAME | O | C | 80 | 홍길동 | 결제고객 이름 | 
+PCD_PAY_CARDNAME | O | C | 100 | BC 카드 | 카드사명 |
+PCD_PAY_CARDNUM | O | C | 16 | 1111 * * * * * * * * 4444 | 카드번호(중간 8자리 * 처리) | 
+PCD_USER_DEFINE1 | - | C | 2048 | 가맹점 입력값 1 | 가맹점 사용 필드 1 | 
+PCD_USER_DEFINE2 | - | C | 2048 | 가맹점 입력값 2 | 가맹점 사용 필드 2 | 
+
 
 <br><br><br>
 ### 2. 이후결제 - 일반결제 
