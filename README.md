@@ -563,15 +563,15 @@ PCD_PAYER_NO | 사용자 필드, 결과에 그대로 리턴 | O |
 {
    "PCD_PAY_RST": "success",
    "PCD_PAY_CODE": "0000",
-   "PCD_PAY_MSG": "카드조회 성공",
+   "PCD_PAY_MSG": "회원조회 성공",
    "PCD_PAY_TYPE": "card",
-   "PCD_PAY_BANKACCTYPE": "개인",
+   "PCD_PAY_BANKACCTYPE": "개인 | 법인",
    "PCD_PAYER_ID" => "NS9qNTgzU2xRNHR2RmFBWWFBTWk5UT09",
    "PCD_PAYER_NAME": "홍길동",
    "PCD_PAYER_HP": "010-****-3333",
-   "PCD_PAY_BANK": "0200",
-   "PCD_PAY_BANKNAME": "BC카드",
-   "PCD_PAY_BANKNUM": "1111-****-****-1111"
+   "PCD_PAY_CARD": "0200",
+   "PCD_PAY_CARDNAME": "BC카드",
+   "PCD_PAY_CARDNUM": "1111-****-****-1111"
 }
 ```
 * Response 파라미터 설명 
@@ -585,9 +585,9 @@ PCD_PAY_TYPE | 결제수단 | card
 PCD_PAYER_ID | 결제 키 | NS9qNTgzU2xRNHR2RmFBWWFBTWk5UT09
 PCD_PAYER_NAME | 결제자명 | 홍길동 
 PCD_PAYER_HP | 휴대폰번호 | 010- * * * * -3333
-PCD_PAY_BANK | 카드사코드 | 0200
-PCD_PAY_BANKNAME | 카드사명 | BC카드
-PCD_PAY_BANKNUM | 카드번호 | 1111- ******** -1111
+PCD_PAY_CARD | 카드사코드 | 0200
+PCD_PAY_CARDNAME | 카드사명 | BC카드
+PCD_PAY_CARDNUM | 카드번호 | 1111- ******** -1111
 
 <br><br><br>
 ## 결제결과 수신  
