@@ -211,7 +211,7 @@ PCD_PAY_OID | 주문번호 | - | 미입력시 임의생성
 PCD_REGULER_FLAG | 정기결제 여부 | - | 
 PCD_PAY_YEAR | 정기결제 적용연도 | - | PCD_REGULER_FLAG : 'Y' 일때 필수
 PCD_PAY_MONTH | 정기결제 적용월 | - | PCD_REGULER_FLAG : 'Y' 일때 필수
-PCD_SIMPLE_FLAG | 간편결제 여부 | - | 
+PCD_SIMPLE_FLAG | 간편결제 여부 | - | Y | 
 PCD_PAYER_ID | 결제결과 리턴 빌링키 | - | PCD_SIMPLE_FLAG가 Y일 때 필수
 
 <br><br>
