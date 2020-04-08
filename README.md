@@ -212,7 +212,7 @@ PCD_REGULER_FLAG | 정기결제 여부 | - |
 PCD_PAY_YEAR | 정기결제 적용연도 | - | PCD_REGULER_FLAG : 'Y' 일때 필수
 PCD_PAY_MONTH | 정기결제 적용월 | - | PCD_REGULER_FLAG : 'Y' 일때 필수
 PCD_SIMPLE_FLAG | 간편결제 여부 | - | Y / N
-PCD_PAYER_ID | 결제결과 리턴 빌링키 | - | PCD_SIMPLE_FLAG가 Y일 때 필수
+PCD_PAYER_ID | 결제결과 리턴 빌링키 | - | PCD_SIMPLE_FLAG가 Y일 때 필수. 카드등록 또는 결제 후 재결제 시 요청
 
 <br><br>
 #### 1-1. 결제생성 후 승인(PCD_PAY_WORK : CERT) 
