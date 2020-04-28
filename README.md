@@ -220,28 +220,30 @@ PCD_PAYER_ID | 결제결과 리턴 빌링키 | - | PCD_SIMPLE_FLAG가 Y일 때 �
 파라미터 ID | 설명 | 예시
 :----: | :----: | :----: 
 PCD_PAY_RST | 결제요청 결과 | success / error 
-PCD_PAY_MSG | 결제요청 결과 메세지 | 출금이체완료 / 실패 등 
-PCD_AUTH_KEY | 결제요청을 위한 Transaction 키 | a688ccb3... 
-PCD_PAY_REQKEY | 결제생성후 승인을 위한 키 | RmFBWWFBTWNS9qNTgzU2xdd2XRNHR2
-PCD_PAY_COFURL | 결제생성, 승인후 리턴 URL | https://cpay.payple.kr/php/PayConfirmAct.php 
-PCD_PAY_OID | 주문번호 | test201804000001
-PCD_PAY_TYPE | 결제수단 | 
+PCD_PAY_MSG | 결제요청 결과 메세지 | 결제완료 / 실패 등 
 PCD_PAY_WORK | 결제요청방식 | CERT / PAY 
+PCD_AUTH_KEY | 결제 후 리턴 받은 토큰키 | a688ccb3... 
+PCD_PAY_REQKEY | CERT - 결제생성 후 승인을 위한 키 | RmFBWWFBTWNS9qNTgzU2xdd2XRNHR2
+PCD_PAY_COFURL | CERT - 결제생성, 승인후 리턴 URL | https://cpay.payple.kr/php/PayConfirmAct.php 
+PCD_PAY_OID | 주문번호 | test201804000001
+PCD_PAY_TYPE | 결제수단 | card
 PCD_PAYER_ID | 결제 키 | NS9qNTgzU2xRNHR2RmFBWWFBTWk5UT09
 PCD_PAYER_NO | 결제고객 고유번호 | 1234 
-PCD_REGULER_FLAG | 정기결제 여부 | Y / N
-PCD_PAY_YEAR | 과금연도<br>(정기결제) | 2018 
-PCD_PAY_MONTH | 과금월<br>(정기결제) | 08
 PCD_PAY_GOODS | 상품명 | 정기구독 
 PCD_PAY_TOTAL | 결제금액 | 1000
-PCD_PAY_ISTAX | 과세 여부 | Y / N
 PCD_PAY_TAXTOTAL | 부가세 | 91
-PCD_PAY_TIME | 결제완료 시간 | 20180110152911
+PCD_PAY_ISTAX | 과세 여부 | Y / N
+PCD_PAYER_EMAIL | dev@payple.kr | 결제자 이메일
+PCD_PAY_YEAR | 과금연도<br>(정기결제) | 2018 
+PCD_PAY_MONTH | 과금월<br>(정기결제) | 08
 PCD_PAY_CARDNAME | 카드사명 | BC카드
 PCD_PAY_CARDNUM | 카드번호 | 12345678 ** ** 1234
 PCD_PAY_CARDTRADENUM | 카드거래번호 | 201904141320332692022400
 PCD_PAY_CARDAUTHNO | 카드승인번호 | 42423223
 PCD_PAY_CARDRECEIPT | 카드전표URL | https://www.danalpay.com/receipt/creditcard/view.aspx?dataType=receipt&cpid=xxxxxxxxxx&data=xxxxxxxx
+PCD_PAY_TIME | 결제완료 시간 | 20180110152911
+PCD_REGULER_FLAG | 정기결제 여부 | Y / N
+PCD_RST_URL | /order_result.html | 결제요청결과 RETURN URL
 PCD_USER_DEFINE1 | 사용자정의1 | 
 PCD_USER_DEFINE1 | 사용자정의2 | 
 
