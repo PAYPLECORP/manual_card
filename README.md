@@ -215,7 +215,7 @@ PCD_SIMPLE_FLAG | 간편결제 여부 | - | Y / N
 PCD_PAYER_ID | 결제결과 리턴 빌링키 | - | PCD_SIMPLE_FLAG가 Y일 때 필수. 카드등록 또는 결제 후 재결제 시 요청
 
 
-*Response 파라미터 설명
+* 결제(CERT|PAY) Response 파라미터 설명
 파라미터 ID | 설명 | 예시
 :----: | :----: | :----: 
 PCD_PAY_RST | 결제요청 결과 | success / error 
