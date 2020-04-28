@@ -403,14 +403,14 @@ Cache-Control: no-cache
 }
 
 <!-- 결제요청  -->
-POST /php/RePayCardAct.php?ACT_=PAYM HTTTP/1.1
+POST /php/RePayCardAct.php?ACT_=PAYM HTTP/1.1
 Host: testcpay.payple.kr
 Content-Type: application/json
 Cache-Control: no-cache
 {
    "PCD_CST_ID": "리턴받은 cst_id",
    "PCD_CUST_KEY": "리턴받은 custKey",
-   "PCD_AUTH_KEY": "a688ccb3555c25cd722483f03e23065c3d0251701ad6da895eb2d830bc06e34d",
+   "PCD_AUTH_KEY": "리턴받은 AuthKey",
    "PCD_PAY_TYPE": "card",		
    "PCD_PAYER_ID": "NS9qNTgzU2xRNHR2RmFBWWFBTWk5UT09",
    "PCD_PAYER_NO": 2324,
@@ -524,7 +524,7 @@ Cache-Control: no-cache
 }
 
 <!-- 승인취소 요청  -->
-POST /php/account/api/cPayCAct.php HTTTP/1.1
+POST /php/account/api/cPayCAct.php HTTP/1.1
 Host: testcpay.payple.kr
 Content-Type: application/json
 Referer: http://localhost:8080
@@ -532,7 +532,7 @@ Cache-Control: no-cache
 {
   "PCD_CST_ID": "리턴받은 cst_id",
   "PCD_CUST_KEY": "리턴받은 custKey",
-  "PCD_AUTH_KEY": "a688ccb3555c25cd722483f03e23065c3d0251701ad6da895eb2d830bc06e34d",  
+  "PCD_AUTH_KEY": "리턴받은 AuthKey",  
   "PCD_REFUND_KEY" : "a41ce010ede9fcbfb3be86b24858806596a9db68b79d138b147c3e563e1829a0",
   "PCD_PAYCANCEL_FLAG": "Y",
   "PCD_PAY_OID": "test201804000001",
