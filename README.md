@@ -490,7 +490,7 @@ Cache-Control: no-cache
 }
 
 <!-- 승인취소 요청  -->
-POST /php/PayChkAct.php HTTTP/1.1
+POST /php/account/api/cPayCAct.php HTTTP/1.1
 Host: testcpay.payple.kr
 Content-Type: application/json
 Referer: http://localhost:8080
