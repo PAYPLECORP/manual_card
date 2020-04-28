@@ -253,16 +253,17 @@ PCD_USER_DEFINE1 | 사용자정의2 |
 * Request 예시 
 ```html
 <!-- 결제 승인요청 --> 
-POST /php/PayCardConfirmAct.php?ACT_=PAYM HTTTP/1.1
+/* CERT 결제승인요청 후 리턴받은 PCD_PAY_COFURL 로 결제요청  */
+POST /php/PayCardConfirmAct.php?ACT_=PAYM HTTP/1.1
 Host: testcpay.payple.kr
 Content-Type: application/json
 Cache-Control: no-cache
 {
   "PCD_CST_ID": "test",										
   "PCD_CUST_KEY": "abcd1234567890",								
-  "PCD_AUTH_KEY": "a688ccb3555c25cd722483f03e23065c3d0251701ad6da895eb2d830bc06e34d", 
-  "PCD_PAY_REQKEY": "RmFBWWFBTWNS9qNTgzU2xdd2XRNHR2",					
-  "PCD_PAYER_ID": "NS9qNTgzU2xRNHR2RmFBWWFBTWk5UT09"
+  "PCD_AUTH_KEY": "결제승인요청 후 리턴받은 PCD_AUTH_KEY", 
+  "PCD_PAY_REQKEY": "결제승인요청 후 리턴받은 PCD_PAY_REQKEY",					
+  "PCD_PAYER_ID": "결제승인요청 후 리턴받은 PCD_PAYER_ID"
 }
 ```
 * Request 파라미터 설명 
