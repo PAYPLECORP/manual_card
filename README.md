@@ -243,7 +243,7 @@ PCD_PAY_CARDAUTHNO | 카드승인번호 | 42423223
 PCD_PAY_CARDRECEIPT | 카드전표URL | https://www.danalpay.com/receipt/creditcard/view.aspx?dataType=receipt&cpid=xxxxxxxxxx&data=xxxxxxxx
 PCD_PAY_TIME | 결제완료 시간 | 20180110152911
 PCD_REGULER_FLAG | 정기결제 여부 | Y / N
-PCD_RST_URL | /order_result.html | 결제요청결과 RETURN URL
+PCD_RST_URL | 결제요청결과 RETURN URL | /order_result.html
 PCD_USER_DEFINE1 | 사용자정의1 | 
 PCD_USER_DEFINE1 | 사용자정의2 | 
 
