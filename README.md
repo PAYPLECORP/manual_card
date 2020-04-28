@@ -53,9 +53,9 @@ Cache-Control: no-cache
   "cst_id": "UFVNNVZpZk4reWo5UFRualUwcGV4dz09",
   "custKey": "T3JzRkp5L1FTcEFDa1FQdHo5Um1UZz09",
   "AuthKey": "a688ccb3555c25cd722483f03e23065c3d0251701ad6da895eb2d830bc06e34d",
-  "return_url": "https://cpay.payple.kr/index.php?ACT_=PAYM",
-  "cPayHost": "https://cpay.payple.kr",
-  "cPayUrl": "/index.php?ACT_=PAYM"
+  "PCD_PAY_HOST": "https://testcpay.payple.kr",
+  "PCD_PAY_URL": "/index.php?ACT_=PAYM",
+  "return_url": "https://testcpay.payple.kr/index.php?ACT_=PAYM"
 }
 ```
 
