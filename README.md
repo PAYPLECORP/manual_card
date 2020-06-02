@@ -317,7 +317,7 @@ PCD_PAY_MSG | O | C | 255 | 결제완료 | 결제요청 결과 메세지 |
 PCD_REQ_KEY | O | C | 255 | RmFBWWFBTWNS9qNTgzU2xdd2XRNHR2c3d0251701ad6da895eb2d830bc06e34d | 최종 승인요청용 키
 PCD_PAY_TYPE | O | C | 20 | card | ‘card’ - 고정값 |
 PCD_PAY_OID | O | C | 255 | test099942200156938 | 주문번호 |
-PCD_PAYER_NO | - | N | 255 | 2324 | 사용자 필드, 결과에 그대로 리턴 |
+PCD_PAYER_NO | - | N | 20 | 2324 | 사용자 필드, 결과에 그대로 리턴 |
 PCD_PAYER_ID | O | C | 255 | d0to... | 결제(빌링) KEY |
 PCD_PAYER_EMAIL | - | C | 100 | dev@payple.kr | 결과 발송 Email | 
 PCD_PAY_YEAR | O | C | 4 | 2019 | 결제 구분 년도 |
@@ -369,7 +369,7 @@ PCD_PAY_MSG | O | C | 255 | 결제완료 | 결제요청 결과 메세지 |
 PCD_PAY_WORK | O | C | 4 | AUTH | 결제요청 방식 |
 PCD_AUTH_KEY | O | C | 255 | a688ccb3555c25cd722483f03e23065c3d0251701ad6da895eb2d830bc06e34d | 결제요청을 위한 Transaction 키 | 
 PCD_PAY_TYPE | O | C | 20 | card | ‘card’ - 고정값 |
-PCD_PAYER_NO | - | N | 255 | 2324 | 사용자 필드, 결과에 그대로 리턴 |
+PCD_PAYER_NO | - | N | 20 | 2324 | 사용자 필드, 결과에 그대로 리턴 |
 PCD_PAYER_ID | O | C | 255 | d0to... | 결제(빌링) KEY |
 PCD_PAYER_NAME | O | C | 80 | 홍길동 | 결제고객 이름 | 
 PCD_PAY_CARDNAME | O | C | 100 | BC 카드 | 카드사명 |
@@ -435,7 +435,7 @@ PCD_CUST_KEY | O | C | 255 | T3Jz... | 가맹점 인증 후 리턴받은 custKey
 PCD_AUTH_KEY | O | C | 20 | a688c... | 가맹점 인증 후 리턴받은 인증 Token |
 PCD_PAY_TYPE | O | C | 20 | card | ‘card’ - 고정값 |
 PCD_PAYER_ID | O | C | 255 | d0to... | 카드등록 후 리턴받은 결제(빌링) KEY |
-PCD_PAYER_NO | - | N | 255 | 2324 | 사용자 필드, 결과에 그대로 리턴 |
+PCD_PAYER_NO | - | N | 20 | 2324 | 사용자 필드, 결과에 그대로 리턴 |
 PCD_PAYER_HP | - | C | 20 | 01023457896 | 고객 휴대폰번호를 전송하시면 고객의 승인문자 민원을 방지하기 위한 알림톡이 발송됩니다. |
 PCD_PAYER_EMAIL | - | C | 100 | dev@payple.kr | 결과 발송 Email | 
 PCD_PAY_GOODS | O | C | 2048 | 정기구독 | 상품명 |
@@ -486,7 +486,7 @@ PCD_PAY_CODE | O | C | 8 | CDAU0000 | 결제요청 결과 코드 |
 PCD_PAY_MSG | O | C | 255 | 결제완료 | 결제요청 결과 메세지 |
 PCD_PAY_TYPE | O | C | 20 | card | ‘card’ - 고정값 |
 PCD_PAY_OID | O | C | 255 | test099942200156938 | 주문번호 |
-PCD_PAYER_NO | - | N | 255 | 2324 | 사용자 필드, 결과에 그대로 리턴 |
+PCD_PAYER_NO | - | N | 20 | 2324 | 사용자 필드, 결과에 그대로 리턴 |
 PCD_PAYER_ID | O | C | 255 | d0to... | 결제(빌링) KEY |
 PCD_PAYER_EMAIL | - | C | 100 | dev@payple.kr | 결과 발송 Email | 
 PCD_PAY_YEAR | O | C | 4 | 2019 | 결제 구분 년도 |
@@ -587,7 +587,7 @@ PCD_PAY_CODE | O | C | 8 | PAYC0000 | 취소 결과코드 |
 PCD_PAY_MSG | O | C | 255 | 환불성공 | 취소 결과 메세지 |
 PCD_PAY_TYPE | O | C | 20 | card | ‘card’ - 고정값 |
 PCD_PAY_OID | O | C | 255 | test099942200156938 | 주문번호 |
-PCD_PAYER_NO | - | N | 255 | 2324 | 사용자 필드, 결과에 그대로 리턴 |
+PCD_PAYER_NO | - | N | 20 | 2324 | 사용자 필드, 결과에 그대로 리턴 |
 PCD_PAYER_ID | O | C | 255 | d0to... | 결제(빌링) KEY |
 PCD_PAY_YEAR | O | C | 4 | 2019 | 결제 구분 년도 |
 PCD_PAY_MONTH | O | C | 2 | 09 | 결제 구분 월 |
