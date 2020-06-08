@@ -124,7 +124,7 @@ Cache-Control: no-cache
 ![Alt text](/img/card_genaral.png) <br><br>
 * **정기결제** 화면입니다. 이용을 위해서는 별도 심사가 필요하며 카드번호, 유효기간, 생년월일, 비밀번호 입력으로 결제가 진행됩니다.<br><br>
 ![Alt text](/img/card_bill.png) <br><br>
-* 정기결제에서 최초결제없이 **카드등록만 하기 위해서는 obj.PCD_PAY_WORK = 'AUTHREG'** 로 세팅하시면 됩니다.<br><br>
+* 정기결제에서 최초결제없이 **카드등록만 하기 위해서는 obj.PCD_PAY_WORK = 'AUTH'** 로 세팅하시면 됩니다.<br><br>
 ![Alt text](/img/card_reg.png) <br><br>
 * 아래 소스코드를 가맹점 주문페이지에 추가합니다.
 ```html
