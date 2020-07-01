@@ -200,6 +200,7 @@ PCD_SIMPLE_FLAG | 간편결제 여부 | - | Y / N
 PCD_PAYER_AUTHTYPE | 간편결제 인증방식 | - | PCD_SIMPLE_FLAG : 'Y' 일때 필수<br/>- pwd : 결제비밀번호
 PCD_CARD_VER | 일반/정기결제 | O | - 01 : 정기<br>- 02 : 일반 
 PCD_RST_URL | 결제(요청)결과 RETURN URL | O | - 결제결과를 콜백 함수가 아닌 URL로 수신할 경우만 해당<br>- 모바일에서 팝업방식은 상대경로, 다이렉트 방식은 절대경로로 설정  
+PCD_PAYER_ID | 결제결과 리턴 빌링키 | - | PCD_SIMPLE_FLAG가 Y일 때 필수. 카드등록 또는 결제 후 재결제 시 요청
 PCD_PAYER_NO | 가맹점의 결제고객 고유번호 | - | maxlength=10
 PCD_PAYER_NAME | 결제고객 이름 | - | 
 PCD_PAYER_HP | 결제고객 휴대폰번호 | - | 결제고객에게 결제내용에 대한 알림톡이 발송됩니다.
@@ -212,7 +213,7 @@ PCD_PAY_OID | 주문번호 | - | 미입력시 임의생성
 PCD_REGULER_FLAG | 정기결제 여부 | - | 
 PCD_PAY_YEAR | 정기결제 적용연도 | - | PCD_REGULER_FLAG : 'Y' 일때 필수
 PCD_PAY_MONTH | 정기결제 적용월 | - | PCD_REGULER_FLAG : 'Y' 일때 필수
-PCD_PAYER_ID | 결제결과 리턴 빌링키 | - | PCD_SIMPLE_FLAG가 Y일 때 필수. 카드등록 또는 결제 후 재결제 시 요청
+
 
 <br><br>
 * 결제(CERT|PAY) Response 파라미터 설명
