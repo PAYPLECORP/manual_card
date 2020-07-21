@@ -597,7 +597,7 @@ PCD_PAY_MONTH | - | C | 2 | 09 | 결제 구분 월 |
 PCD_PAY_GOODS | O | C | 20 | 상품1 | 상품이름 |
 PCD_REGULER_FLAG | - | C | 1 | N | Y/N |
 PCD_REFUND_TOTAL | O | N | 20 | 1000 | 취소금액 | 
-PCD_PAY_TAXTOTAL | - | N | 20 | 10 | 복합과세 주문건(과세+면세)에 필요한 항목이며 가맹점에서 전송한 값을 부가세로 설정합니다.
+PCD_REFUND_TAXTOTAL | - | N | 20 | 10 | 복합과세 주문건(과세+면세)에 필요한 항목이며 가맹점에서 전송한 값을 부가세로 설정합니다.
 PCD_PAY_CARDTRADENUM | O | N | 24 | 2019... | 카드 거래번호
 PCD_PAY_CARDRECEIPT | O | N | 255 | https... | 카드 전표 URL
 
