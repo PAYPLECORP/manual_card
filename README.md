@@ -573,10 +573,7 @@ PCD_PAY_TAXTOTAL | - | N | 20 | 10 | 복합과세 주문건(과세+면세)에 �
   "PCD_PAY_OID" => "test201804000001",
   "PCD_PAYER_NO" => 1234,
   "PCD_PAYER_ID" => "NS9qNTgzU2xRNHR2RmFBWWFBTWk5UT09",
-  "PCD_PAY_YEAR" => "2019",
-  "PCD_PAY_MONTH" => "09",
   "PCD_PAY_GOODS" => "정기구독",	
-  "PCD_REGULER_FLAG" => "Y",
   "PCD_REFUND_TOTAL" => 1000,
   "PCD_PAY_TAXTOTAL" => 10
 }
@@ -591,11 +588,11 @@ PCD_PAY_CODE | O | C | 8 | PAYC0000 | 취소 결과코드 |
 PCD_PAY_MSG | O | C | 255 | 환불성공 | 취소 결과 메세지 |
 PCD_PAY_TYPE | O | C | 20 | card | ‘card’ - 고정값 |
 PCD_PAY_OID | O | C | 255 | test099942200156938 | 주문번호 |
-PCD_PAYER_NO | - | N | 20 | 2324 | 사용자 필드, 결과에 그대로 리턴 |
+PCD_PAYER_NO | - | N | 20 | 1234 | 사용자 필드, 결과에 그대로 리턴 |
 PCD_PAYER_ID | O | C | 255 | d0to... | 결제(빌링) KEY |
 PCD_PAY_YEAR | - | C | 4 | 2019 | 결제 구분 년도 |
 PCD_PAY_MONTH | - | C | 2 | 09 | 결제 구분 월 |
-PCD_REGULER_FLAG | - | C | 1 | Y | ‘Y’ - 고정값 |
+PCD_REGULER_FLAG | - | C | 1 | N | Y/N |
 PCD_REFUND_TOTAL | O | N | 20 | 1000 | 취소금액 | 
 PCD_PAY_TAXTOTAL | - | N | 20 | 10 | 복합과세 주문건(과세+면세)에 필요한 항목이며 가맹점에서 전송한 값을 부가세로 설정합니다. |
 
