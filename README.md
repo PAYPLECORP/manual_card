@@ -556,9 +556,9 @@ PCD_AUTH_KEY | O | C | 20 | a688c... | 가맹점 인증 후 리턴받은 인증 
 PCD_REFUND_KEY | O | C | 255 | a41c... | 취소요청  Token(관리자화면에서 확인 가능) |
 PCD_PAYCANCEL_FLAG | O | C | 1 | Y | 'Y' - 고정값 |
 PCD_PAY_OID | O | C | 255 | test099942200156938 | 주문번호 |
-PCD_REGULER_FLAG | O | C | 1 | Y | ‘Y’ - 고정값 |
-PCD_PAY_YEAR | O | C | 4 | 2019 | 결제 구분 년도 |
-PCD_PAY_MONTH | O | C | 2 | 09 | 결제 구분 월 |
+PCD_REGULER_FLAG | - | C | 1 | Y | ‘Y’ - 고정값 |
+PCD_PAY_YEAR | - | C | 4 | 2019 | 결제 구분 년도 |
+PCD_PAY_MONTH | - | C | 2 | 09 | 결제 구분 월 |
 PCD_PAY_DATE | O | C | 8 | 20190801 | 취소할 원거래일자 |
 PCD_REFUND_TOTAL | O | N | 20 | 1000 | 승인취소 신청금액(기존 결제금액보다 낮은 금액 입력시 부분취소로 진행) | 
 PCD_PAY_TAXTOTAL | - | N | 20 | 10 | 복합과세 주문건(과세+면세)에 필요한 항목이며 가맹점에서 전송한 값을 부가세로 설정합니다. |
