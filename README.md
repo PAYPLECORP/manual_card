@@ -539,9 +539,6 @@ Cache-Control: no-cache
   "PCD_REFUND_KEY" : "a41ce010ede9fcbfb3be86b24858806596a9db68b79d138b147c3e563e1829a0",
   "PCD_PAYCANCEL_FLAG": "Y",
   "PCD_PAY_OID": "test201804000001",
-  "PCD_REGULER_FLAG": "Y",
-  "PCD_PAY_YEAR": "2019",
-  "PCD_PAY_MONTH": "09",
   "PCD_PAY_DATE": 20180502,
   "PCD_REFUND_TOTAL": 1000,
   "PCD_PAY_TAXTOTAL" : 10
@@ -569,13 +566,18 @@ PCD_PAY_TAXTOTAL | - | N | 20 | 10 | 복합과세 주문건(과세+면세)에 �
   "PCD_PAY_RST" => "success",
   “PCD_PAY_CODE” => “PAYC0000”,
   "PCD_PAY_MSG" => "환불성공",
-  "PCD_PAY_TYPE" => "card",			
   "PCD_PAY_OID" => "test201804000001",
+  "PCD_PAY_TYPE" => "card",			
   "PCD_PAYER_NO" => 1234,
   "PCD_PAYER_ID" => "NS9qNTgzU2xRNHR2RmFBWWFBTWk5UT09",
+  "PCD_PAY_YEAR":"",
+  "PCD_PAY_MONTH":"",
   "PCD_PAY_GOODS" => "정기구독",	
+  "PCD_REGULER_FLAG":"N",
   "PCD_REFUND_TOTAL" => 1000,
-  "PCD_PAY_TAXTOTAL" => 10
+  "PCD_PAY_TAXTOTAL" => 10,
+  "PCD_PAY_CARDTRADENUM":"2019...",
+  "PCD_PAY_CARDRECEIPT":"http..."
 }
 ```
 
@@ -594,7 +596,9 @@ PCD_PAY_YEAR | - | C | 4 | 2019 | 결제 구분 년도 |
 PCD_PAY_MONTH | - | C | 2 | 09 | 결제 구분 월 |
 PCD_REGULER_FLAG | - | C | 1 | N | Y/N |
 PCD_REFUND_TOTAL | O | N | 20 | 1000 | 취소금액 | 
-PCD_PAY_TAXTOTAL | - | N | 20 | 10 | 복합과세 주문건(과세+면세)에 필요한 항목이며 가맹점에서 전송한 값을 부가세로 설정합니다. |
+PCD_PAY_TAXTOTAL | - | N | 20 | 10 | 복합과세 주문건(과세+면세)에 필요한 항목이며 가맹점에서 전송한 값을 부가세로 설정합니다.
+PCD_PAY_CARDTRADENUM | O | N | 24 | 2019... | 카드 거래번호
+PCD_PAY_CARDRECEIPT | O | N | 24 | 2019... | 카드 전표 URL
 
 <br><br><br>
 ### 5. 등록카드 해지(정기결제) 
